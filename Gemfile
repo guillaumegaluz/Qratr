@@ -20,3 +20,13 @@ group :development do
   gem 'foreman'
   gem 'heroku'
 end
+
+group :test do
+  gem 'jasmine'
+end
+
+group :development, :test do
+  gem 'colored'
+  gem 'guard'
+  gem 'guard-rake'
+end

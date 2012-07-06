@@ -1,20 +1,16 @@
 require 'bundler'
-Bundler.setup :default, (ENV['RACK_ENV'] || 'development')
+environment = ENV['RACK_ENV'] || 'development'
+Bundler.setup :default, environment
 
 require 'sinatra'
 require 'sinatra/backbone'
 require 'sinatra/contrib'
-require 'sprockets'
-require 'compass'
-require 'sprockets-sass'
-require 'bootstrap-sass'
 require 'coffee-script'
-require 'yui/compressor'
 
-set :root, File.dirname(__FILE__)
-
-require './config/sprockets'
+require './lib/sprockets_environment_builder'
 require './app'
+
+set :sprockets, SprocketsEnvironmentBuilder.build(environment)
 
 App.helpers do
   def haml_partial(page, options={})

@@ -1,3 +1,5 @@
 .DS_Store
 .sass-cache
 .env
+public/test-assets
+spec/javascripts/*.js

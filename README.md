@@ -1,6 +1,4 @@
-### TODO
-
-* Add ActiveRecord support
+Features Backbone.js, Twitter Bootstrap, Jasmine, Sprockets (CoffeeScript & SASS support), basic JST support, and more.
 
 ### install
 
@@ -13,6 +11,10 @@
 ### run
 
     foreman start
+    bundle exec guard
+    rake test
+
+Open http://localhost:5000 for the web app and http://localhost:8888 for Jasmine.
 
 ### pulling in updates
 

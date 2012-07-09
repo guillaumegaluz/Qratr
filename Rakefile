@@ -21,7 +21,6 @@ namespace :assets do
   desc 'compile sprockets to static files for testing purposes'
 
   task :compile_javascripts do
-    p "uh"
     compile_asset('public/test-assets', 'application.js', :development)
   end
 

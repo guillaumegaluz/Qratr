@@ -1,16 +1,11 @@
-require 'bundler'
-environment = ENV['RACK_ENV'] || 'development'
-Bundler.setup :default, environment
-
 require 'sinatra'
 require 'sinatra/backbone'
 require 'sinatra/contrib'
-require 'coffee-script'
 
 require './lib/sprockets_environment_builder'
 require './app'
 
-set :sprockets, SprocketsEnvironmentBuilder.build(environment)
+set :sprockets, SprocketsEnvironmentBuilder.build(ENV['RACK_ENV'] || 'development')
 
 App.helpers do
   def haml_partial(page, options={})

@@ -2,4 +2,4 @@
 .sass-cache
 .env
 public/test-assets
-spec/javascripts/*.js
+spec/compiled/*.js

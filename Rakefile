@@ -3,6 +3,12 @@ require './lib/sprockets_environment_builder'
 
 begin
   require 'jasmine'
+  # custom config directory hack
+  Jasmine::Config.class_eval do
+    def simple_config_file
+      File.join(project_root, 'config/jasmine.yml')
+    end
+  end
   load 'jasmine/tasks/jasmine.rake'
 rescue LoadError
   task :jasmine do
@@ -29,7 +35,7 @@ namespace :assets do
   end
 
   task :compile_specs do
-    compile_asset('spec/javascripts', 'spec.js', :test)
+    compile_asset('spec/compiled', 'spec.js', :test)
   end
 end
 

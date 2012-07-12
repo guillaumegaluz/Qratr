@@ -13,7 +13,7 @@ class SprocketsEnvironmentBuilder
     sprockets.append_path 'javascripts'
     sprockets.append_path 'stylesheets'
     #sprockets.append_path 'images'
-    sprockets.append_path 'spec/coffeescripts'
+    sprockets.append_path 'spec/javascripts'
 
     if [:production, :test].include? environment
       sprockets.css_compressor = YUI::CssCompressor.new

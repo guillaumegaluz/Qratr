@@ -1,4 +1,4 @@
-Features Backbone.js, Twitter Bootstrap, Jasmine, Sprockets (CoffeeScript & SASS support), basic JST support, and more.
+Features Backbone.js, Twitter Bootstrap, Jasmine, Sprockets (CoffeeScript, SASS, and JST support), and more.
 
 ### install
 
@@ -11,10 +11,10 @@ Features Backbone.js, Twitter Bootstrap, Jasmine, Sprockets (CoffeeScript & SASS
 ### run
 
     foreman start
-    bundle exec guard
+    rake guard
     rake test
 
-Open http://localhost:5000 for the web app and http://localhost:8888 for Jasmine.
+Open [http://localhost:5000](http://localhost:5000) for the web app and [http://localhost:8888](http://localhost:8888) for Jasmine.
 
 ### pulling in updates
 

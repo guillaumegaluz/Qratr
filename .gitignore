@@ -1,5 +1,5 @@
 .DS_Store
 .sass-cache
 .env
-public/test-assets
-spec/compiled
+public/.compiled
+spec/.compiled

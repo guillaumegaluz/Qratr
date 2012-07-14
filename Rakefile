@@ -27,15 +27,15 @@ namespace :assets do
   desc 'compile sprockets to static files for testing purposes'
 
   task :compile_javascripts do
-    compile_asset('public/test-assets', 'application.js', :development)
+    compile_asset('public/.compiled', 'application.js', :development)
   end
 
   task :compile_stylesheets do
-    compile_asset('public/test-assets', 'application.css', :development)
+    compile_asset('public/.compiled', 'application.css', :development)
   end
 
   task :compile_specs do
-    compile_asset('spec/compiled', 'spec.js', :test)
+    compile_asset('spec/.compiled', 'spec.js', :test)
   end
 end
 

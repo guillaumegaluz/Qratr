@@ -1,4 +1,5 @@
 require 'compass'
+require 'haml_coffee_assets'
 require 'sprockets'
 require 'sprockets-sass'
 require 'bootstrap-sass'
@@ -13,6 +14,7 @@ class SprocketsEnvironmentBuilder
     sprockets.append_path 'javascripts'
     sprockets.append_path 'stylesheets'
     #sprockets.append_path 'images'
+    sprockets.append_path 'templates'
     sprockets.append_path 'spec/javascripts'
 
     if [:production, :test].include? environment

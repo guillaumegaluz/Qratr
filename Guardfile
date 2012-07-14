@@ -7,6 +7,8 @@ guard :shell do
       "stylesheets"
     elsif %r{^spec/javascripts/.+$}.match path
       "specs"
+    elsif %r{^views/.+$}.match path
+      "templates"
     end
     `rake assets:compile_#{asset_type}`  unless asset_type.nil?
   end

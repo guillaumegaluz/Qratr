@@ -7,7 +7,6 @@ gem 'haml'
 gem 'less'
 gem 'sass'
 gem 'sinatra'
-gem 'sinatra-backbone'
 gem 'sinatra-contrib'
 gem 'sprockets'
 gem 'sprockets-sass'
@@ -15,6 +14,11 @@ gem 'therubyracer'
 gem 'uglifier'
 gem 'unicorn'
 gem 'yui-compressor'
+
+group :assets do
+  gem 'execjs'
+  gem 'haml_coffee_assets'
+end
 
 group :development do
   gem 'foreman'

@@ -1,5 +1,4 @@
 require 'sinatra'
-require 'sinatra/backbone'
 require 'sinatra/contrib'
 
 require './lib/sprockets_environment_builder'

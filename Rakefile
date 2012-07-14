@@ -1,4 +1,5 @@
 require 'colored'
+require 'guard'
 require './lib/sprockets_environment_builder'
 
 begin
@@ -16,15 +17,25 @@ rescue LoadError
   end
 end
 
+task :guard do
+  Rake::Task["assets:compile_all"].invoke
+  ::Guard.start
+end
+
 task :test do
-  %w{javascripts stylesheets specs}.each do |asset|
-    Rake::Task["assets:compile_#{asset}"].invoke
-  end
+  Rake::Task["assets:compile_all"].invoke
   Rake::Task["jasmine"].invoke
 end
 
 namespace :assets do
   desc 'compile sprockets to static files for testing purposes'
+
+  task :compile_all do
+    %w{javascripts stylesheets specs}.each do |asset|
+      Rake::Task["assets:compile_#{asset}"].invoke
+    end
+    puts "Finished asset precompilation".blue
+  end
 
   task :compile_javascripts do
     compile_asset('public/.compiled', 'application.js', :development)

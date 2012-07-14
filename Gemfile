@@ -28,5 +28,6 @@ end
 group :development, :test do
   gem 'colored'
   gem 'guard'
-  gem 'guard-rake'
+  gem 'guard-shell'
+  gem 'rake'
 end

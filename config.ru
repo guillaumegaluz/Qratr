@@ -1,6 +1,10 @@
 require 'sinatra'
 require 'sinatra/contrib'
+configure :production do
+  require 'newrelic_rpm'
+end
 
+require './config/initializers'
 require './lib/sprockets_environment_builder'
 require './app'
 

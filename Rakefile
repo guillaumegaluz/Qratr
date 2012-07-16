@@ -1,21 +1,14 @@
 require 'colored'
 require 'guard'
-require './lib/sprockets_environment_builder'
-
-begin
-  require 'jasmine'
-  # custom config directory hack
-  Jasmine::Config.class_eval do
-    def simple_config_file
-      File.join(project_root, 'config/jasmine.yml')
-    end
-  end
-  load 'jasmine/tasks/jasmine.rake'
-rescue LoadError
-  task :jasmine do
-    abort "Jasmine is not available. In order to run jasmine, you must: (sudo) gem install jasmine"
+require 'jasmine'
+# custom config directory hack
+Jasmine::Config.class_eval do
+  def simple_config_file
+    File.join(project_root, 'config/jasmine.yml')
   end
 end
+load 'jasmine/tasks/jasmine.rake'
+require './lib/sprockets_environment_builder'
 
 task :guard do
   Rake::Task["assets:compile_all"].invoke

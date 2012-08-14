@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/contrib'
+require 'json'
 
 %w[lib server].each do |dir|
   Dir.glob("./#{dir}/*.rb").each do |relative_path|

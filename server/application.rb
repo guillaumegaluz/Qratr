@@ -1,5 +1,3 @@
-require 'json'
-
 class App < Sinatra::Base
   register Sinatra::Contrib
   set :root, File.expand_path(".")

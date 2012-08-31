@@ -3,4 +3,8 @@ class App < Sinatra::Base
     @message = "YO"
     haml :index
   end
+
+  get '/json-test' do
+    json :test => {:hello => "world"}
+  end
 end

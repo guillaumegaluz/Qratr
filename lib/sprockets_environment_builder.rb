@@ -11,10 +11,10 @@ class SprocketsEnvironmentBuilder
     environment = environment.to_sym
     sprockets = Sprockets::Environment.new
 
-    sprockets.append_path 'javascripts'
-    sprockets.append_path 'stylesheets'
+    sprockets.append_path 'client/javascripts'
+    sprockets.append_path 'client/stylesheets'
     #sprockets.append_path 'images'
-    sprockets.append_path 'templates'
+    sprockets.append_path 'client/templates'
     sprockets.append_path 'spec/javascripts'
 
     if [:production, :test].include? environment

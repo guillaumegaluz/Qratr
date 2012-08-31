@@ -31,11 +31,11 @@ namespace :assets do
   end
 
   task :compile_javascripts do
-    compile_asset('public/.compiled', 'application.js', :development)
+    compile_asset('client/public/.compiled', 'application.js', :development)
   end
 
   task :compile_stylesheets do
-    compile_asset('public/.compiled', 'application.css', :development)
+    compile_asset('client/public/.compiled', 'application.css', :development)
   end
 
   task :compile_specs do

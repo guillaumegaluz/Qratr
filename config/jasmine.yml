@@ -60,7 +60,7 @@ spec_files:
 #
 # src_dir: public
 #
-src_dir: public
+src_dir: client/public
 
 # spec_dir
 #

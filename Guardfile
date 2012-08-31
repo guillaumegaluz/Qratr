@@ -1,9 +1,9 @@
 guard :shell do
   watch /.*/ do |m|
     path = m[0]
-    asset_type = if %r{^(javascripts|templates)/.+$}.match path
+    asset_type = if %r{^client/(javascripts|templates)/.+$}.match path
       "javascripts"
-    elsif %r{^stylesheets/.+$}.match path
+    elsif %r{^client/stylesheets/.+$}.match path
       "stylesheets"
     elsif %r{^spec/javascripts/.+$}.match path
       "specs"

@@ -10,7 +10,7 @@ Features Backbone.js, Twitter Bootstrap, Jasmine, Sprockets (CoffeeScript, SASS,
 
 ### run
 
-    rerun foreman start
+    rake start
     rake guard
     rake test
 

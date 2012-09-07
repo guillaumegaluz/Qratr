@@ -69,6 +69,8 @@ GEM
     rb-fsevent (0.9.1)
     rb-inotify (0.8.8)
       ffi (>= 0.5.0)
+    rerun (0.7.1)
+      listen
     rspec (2.10.0)
       rspec-core (~> 2.10.0)
       rspec-expectations (~> 2.10.0)
@@ -134,6 +136,7 @@ DEPENDENCIES
   less
   newrelic_rpm
   rake
+  rerun
   sass
   sinatra
   sinatra-contrib

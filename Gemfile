@@ -22,6 +22,7 @@ group :assets do
 end
 
 group :development do
+  gem 'rerun'
 end
 
 group :test do

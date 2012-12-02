@@ -1,3 +1,5 @@
+require './server/application.rb'
+require 'sinatra/activerecord/rake'
 require 'colored'
 require 'guard'
 require 'jasmine'

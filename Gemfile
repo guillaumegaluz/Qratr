@@ -1,13 +1,16 @@
 source :rubygems
 
+gem 'activerecord'
 gem 'bootstrap-sass'
 gem 'coffee-script'
 gem 'compass'
 gem 'haml'
 gem 'less'
 gem 'newrelic_rpm'
+gem 'pg'
 gem 'sass'
 gem 'sinatra'
+gem 'sinatra-activerecord'
 gem 'sinatra-contrib'
 gem 'sprockets'
 gem 'sprockets-sass'

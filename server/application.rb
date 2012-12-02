@@ -1,15 +1,34 @@
 require 'sinatra'
 require 'sinatra/contrib'
+require 'sinatra/activerecord'
 require 'json'
 
-%w[lib server].each do |dir|
+ENV['RACK_ENV'] ||= 'development'
+ENV['DATABASE_URL'] ||= "postgres://postgres@localhost/sinatra_backbone_#{ENV['RACK_ENV']}"
+
+db = URI.parse(ENV['DATABASE_URL'])
+
+DB_SETTINGS = {
+  :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+  :host     => db.host,
+  :username => db.user,
+  :password => db.password,
+  :database => db.path[1..-1],
+  :encoding => 'utf8',
+  :pool     => 10,
+  :port     => db.port,
+}
+
+ActiveRecord::Base.establish_connection(DB_SETTINGS)
+
+%w[lib server server/models].each do |dir|
   Dir.glob("./#{dir}/*.rb").each do |relative_path|
     p relative_path
     require relative_path  unless relative_path == "./server/application.rb"
   end
 end
 
-set :sprockets, SprocketsEnvironmentBuilder.build(ENV['RACK_ENV'] || 'development')
+set :sprockets, SprocketsEnvironmentBuilder.build(ENV['RACK_ENV'])
 
 configure :production do
   require 'newrelic_rpm'

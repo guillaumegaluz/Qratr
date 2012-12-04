@@ -26,6 +26,27 @@ task :test do
   Rake::Task["jasmine"].invoke
 end
 
+# http://www.zerolith.com/rake-tasks-for-non-rails-application.html
+task 'db:schema:dump' do
+  require 'active_record/schema_dumper'
+  File.open(ENV['SCHEMA'] || "db/schema.rb", "w") do |file|
+    ActiveRecord::SchemaDumper.dump(ActiveRecord::Base.connection, file)
+  end
+end
+
+task 'db:schema:load' do
+  file = ENV['SCHEMA'] || "db/schema.rb"
+  load(file)
+end
+
+task 'db:migrate' do
+  Rake::Task["db:schema:dump"].invoke
+end
+
+task 'db:rollback' do
+  Rake::Task["db:schema:dump"].invoke
+end
+
 namespace :assets do
   desc 'compile sprockets to static files for testing purposes'
 

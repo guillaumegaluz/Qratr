@@ -29,7 +29,10 @@ group :development do
 end
 
 group :test do
+  gem 'database_cleaner'
   gem 'jasmine'
+  gem 'rspec'
+  gem 'webmock'
 end
 
 group :development, :test do

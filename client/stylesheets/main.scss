@@ -1,10 +1,11 @@
 @import "bootstrap/mixins";
 
-body {
-  color: darken(#f00, 20%);
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
-#test-bootstrap-mixins {
-  @include box-shadow;
-  @include gradientBar(#eee, #aaa);
+body {
+  color: darken(#f00, 20%);
+  @include gradientBar(#fff, #fdf);
 }

@@ -8,6 +8,7 @@ gem 'haml'
 gem 'less'
 gem 'newrelic_rpm'
 gem 'pg'
+gem 'rake'
 gem 'sass'
 gem 'sinatra'
 gem 'sinatra-activerecord'
@@ -39,5 +40,4 @@ group :development, :test do
   gem 'colored'
   gem 'guard'
   gem 'guard-shell'
-  gem 'rake'
 end

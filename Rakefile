@@ -1,15 +1,18 @@
 require './server/application.rb'
 require 'sinatra/activerecord/rake'
-require 'colored'
-require 'guard'
-require 'jasmine'
-# custom config directory hack
-Jasmine::Config.class_eval do
-  def simple_config_file
-    File.join(project_root, 'config/jasmine.yml')
+begin
+  require 'colored'
+  require 'guard'
+  require 'jasmine'
+  # custom config directory hack
+  Jasmine::Config.class_eval do
+    def simple_config_file
+      File.join(project_root, 'config/jasmine.yml')
+    end
   end
+  load 'jasmine/tasks/jasmine.rake'
+rescue
 end
-load 'jasmine/tasks/jasmine.rake'
 require './lib/sprockets_environment_builder'
 
 task :start do

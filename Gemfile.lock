@@ -69,7 +69,6 @@ GEM
     kgio (2.8.0)
     less (2.2.2)
       commonjs (~> 0.2.6)
-    libv8 (3.11.8.13)
     listen (0.7.2)
     lumberjack (1.0.2)
     method_source (0.8.1)
@@ -88,7 +87,6 @@ GEM
       rack (>= 1.0)
     raindrops (0.10.0)
     rake (10.0.3)
-    ref (1.0.2)
     rerun (0.8.0)
       listen
     rspec (2.12.0)
@@ -130,9 +128,6 @@ GEM
       sprockets (~> 2.0)
       tilt (~> 1.1)
     terminal-table (1.4.5)
-    therubyracer (0.11.3)
-      libv8 (~> 3.11.8.12)
-      ref
     thor (0.17.0)
     tilt (1.3.3)
     tzinfo (0.3.35)
@@ -179,7 +174,6 @@ DEPENDENCIES
   sinatra-contrib
   sprockets
   sprockets-sass
-  therubyracer
   uglifier
   unicorn
   webmock

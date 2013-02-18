@@ -28,7 +28,9 @@ ActiveRecord::Base.establish_connection(DB_SETTINGS)
   end
 end
 
-set :sprockets, SprocketsEnvironmentBuilder.build(ENV['RACK_ENV'])
+unless ENV['RACK_ENV'] == 'production'
+  set :sprockets, SprocketsEnvironmentBuilder.build(ENV['RACK_ENV'])
+end
 
 configure :production, :test do
   set :raise_errors, false

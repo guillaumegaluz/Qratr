@@ -3,6 +3,7 @@ source :rubygems
 gem 'activerecord'
 gem 'bootstrap-sass', "~> 2.1.0"
 gem 'coffee-script'
+gem 'colored'
 gem 'compass'
 gem 'haml'
 gem 'less'
@@ -36,7 +37,6 @@ group :test do
 end
 
 group :development, :test do
-  gem 'colored'
   gem 'guard'
   gem 'guard-shell'
 end

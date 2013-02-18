@@ -71,6 +71,11 @@ namespace :assets do
   task :compile_specs do
     compile_asset('spec/.compiled', 'spec.js', :test)
   end
+
+  task :precompile do
+    compile_asset('client/public/assets', 'application.js', :production)
+    compile_asset('client/public/assets', 'application.css', :production)
+  end
 end
 
 def compile_asset(parent_dir, filename, environment)

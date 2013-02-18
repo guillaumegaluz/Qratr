@@ -37,14 +37,6 @@ configure :production, :test do
   set :show_exceptions, false
 end
 
-configure :production do
-  require 'newrelic_rpm'
-  # Ensure the agent is started using Unicorn
-  # This is needed when using Unicorn and preload_app is not set to true.
-  # See http://support.newrelic.com/kb/troubleshooting/unicorn-no-data
-  NewRelic::Agent.after_fork(:force_reconnect => true) if defined? Unicorn
-end
-
 class App < Sinatra::Base
   register Sinatra::Contrib
   set :root, File.expand_path(".")

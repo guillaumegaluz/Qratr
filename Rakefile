@@ -1,8 +1,7 @@
 require './server/application.rb'
 require 'sinatra/activerecord/rake'
-begin
-  require 'colored'
-  require 'guard'
+require 'colored'
+unless ENV['RACK_ENV'] == 'production'
   require 'jasmine'
   # custom config directory hack
   Jasmine::Config.class_eval do
@@ -11,7 +10,6 @@ begin
     end
   end
   load 'jasmine/tasks/jasmine.rake'
-rescue
 end
 require './lib/sprockets_environment_builder'
 
@@ -20,6 +18,7 @@ task :start do
 end
 
 task :guard do
+  require 'guard'
   Rake::Task["assets:compile_all"].invoke
   ::Guard.start
 end

@@ -3,12 +3,6 @@ require 'sinatra/activerecord/rake'
 require 'colored'
 unless ENV['RACK_ENV'] == 'production'
   require 'jasmine'
-  # custom config directory hack
-  Jasmine::Config.class_eval do
-    def simple_config_file
-      File.join(project_root, 'config/jasmine.yml')
-    end
-  end
   load 'jasmine/tasks/jasmine.rake'
 end
 require './lib/sprockets_environment_builder'

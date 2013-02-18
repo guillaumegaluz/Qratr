@@ -74,7 +74,6 @@ GEM
     lumberjack (1.0.2)
     method_source (0.8.1)
     multi_json (1.6.0)
-    newrelic_rpm (3.5.6.46)
     open4 (1.3.0)
     pg (0.14.1)
     pry (0.9.12)
@@ -164,7 +163,6 @@ DEPENDENCIES
   haml_coffee_assets
   jasmine
   less
-  newrelic_rpm
   pg
   rake
   rerun

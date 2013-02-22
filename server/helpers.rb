@@ -14,6 +14,7 @@ class App < Sinatra::Base
       else
         body_hash.to_json
       end
+      body = "#{params[:callback]}(#{body})"  if params[:callback]
       halt status, headers.merge({'Content-Type' => 'application/json'}), body
     end
   end

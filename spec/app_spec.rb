@@ -18,5 +18,12 @@ describe App do
       get "/example-json-endpoint"
       JSON.parse(last_response.body).should == {"some" => "json"}
     end
+
+    context "with callback param" do
+      it "wraps response JSON in JSONP callback" do
+        get "/example-json-endpoint?callback=what"
+        last_response.body.should match(/^what\(.+\)$/)
+      end
+    end
   end
 end

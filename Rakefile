@@ -8,7 +8,7 @@ end
 require './lib/sprockets_environment_builder'
 
 task :start do
-  sh %{rerun --dir server -- unicorn -p #{ENV['PORT'] || 5000} -c ./config/unicorn.rb}
+  sh %{rerun --dir server -- unicorn -p #{ENV['PORT'] || 5000} -c ./unicorn.rb}
 end
 
 task :guard do

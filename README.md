@@ -8,9 +8,17 @@ Features Backbone.js, Twitter Bootstrap, Jasmine, Sprockets (CoffeeScript, SASS,
     git remote add upstream https://github.com/6/sinatra-backbone-boilerplate.git
     bundle install
 
-### configure activerecord with postgres (optional)
+### configure
 
-Open `/server/application.rb` and modify the DATABASE_URL. Look at [sinatra-activerecord](https://github.com/bmizerany/sinatra-activerecord) for specifics on the rake tasks for migrations and such.
+Open up `config.yml`.
+
+Generate a session secret by opening up `irb` and running the following:
+
+    require 'securerandom'
+    SecureRandom.hex(64)
+
+
+Optionally set `database_url` for ActiveRecord support.
 
 ### run
 

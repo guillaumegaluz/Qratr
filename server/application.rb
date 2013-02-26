@@ -28,18 +28,20 @@ ActiveRecord::Base.establish_connection(DB_SETTINGS)
   end
 end
 
-unless ENV['RACK_ENV'] == 'production'
-  set :sprockets, SprocketsEnvironmentBuilder.build(ENV['RACK_ENV'])
-end
-
-configure :production, :test do
-  set :raise_errors, false
-  set :show_exceptions, false
-end
-
 class App < Sinatra::Base
   register Sinatra::Contrib
   set :root, File.expand_path(".")
   set :public_folder, Proc.new { File.join(root, "client/public") }
   set :views, Proc.new { File.join(root, "client/views") }
+
+  configure :development, :test do
+    set :dump_errors, true
+    set :show_exceptions, true
+    set :sprockets, SprocketsEnvironmentBuilder.build(ENV['RACK_ENV'])
+  end
+
+  configure :production do
+    set :dump_errors, false
+    set :show_exceptions, false
+  end
 end

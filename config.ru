@@ -2,7 +2,7 @@ require './server/application'
 
 unless ENV['RACK_ENV'] == 'production'
   map '/assets' do
-    run settings.sprockets
+    run App.sprockets
   end
 end
 

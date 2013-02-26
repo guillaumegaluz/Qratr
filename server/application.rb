@@ -46,6 +46,7 @@ class App < Sinatra::Base
     set :dump_errors, true
     set :show_exceptions, true
     set :sprockets, SprocketsEnvironmentBuilder.build(ENV['RACK_ENV'])
+    set :sprockets_prefix, '/assets'
   end
 
   configure :production do

@@ -1,7 +1,7 @@
 require './server/application'
 
 if App.settings.respond_to?(:sprockets)
-  map '/assets' do
+  map App.settings.sprockets_prefix do
     run App.settings.sprockets
   end
 end

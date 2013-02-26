@@ -17,11 +17,6 @@ task :guard do
   ::Guard.start
 end
 
-task :test do
-  Rake::Task["assets:compile_all"].invoke
-  Rake::Task["jasmine"].invoke
-end
-
 # http://www.zerolith.com/rake-tasks-for-non-rails-application.html
 task 'db:schema:dump' do
   require 'active_record/schema_dumper'

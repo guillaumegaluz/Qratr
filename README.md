@@ -24,7 +24,7 @@ Optionally set `database_url` for ActiveRecord support.
 
     rake start
     rake guard
-    rake test
+    rake jasmine
 
 Open [http://localhost:5000](http://localhost:5000) for the web app and [http://localhost:8888](http://localhost:8888) for Jasmine.
 

@@ -17,8 +17,7 @@ Generate a session secret by opening up `irb` and running the following:
     require 'securerandom'
     SecureRandom.hex(64)
 
-
-Optionally set `database_url` for ActiveRecord support.
+Optionally set `database_url` for ActiveRecord support. See [sinatra-activerecord](https://github.com/bmizerany/sinatra-activerecord) for ActiveRecord-related rake tasks (migrations, etc).
 
 ### run
 

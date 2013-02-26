@@ -14,7 +14,7 @@ end
 task :guard do
   require 'guard'
   Rake::Task["assets:compile_all"].invoke
-  ::Guard.start
+  exec("bundle exec guard")
 end
 
 # http://www.zerolith.com/rake-tasks-for-non-rails-application.html

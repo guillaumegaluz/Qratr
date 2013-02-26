@@ -1,8 +1,8 @@
 require './server/application'
 
-unless ENV['RACK_ENV'] == 'production'
+if App.settings.respond_to?(:sprockets)
   map '/assets' do
-    run App.sprockets
+    run App.settings.sprockets
   end
 end
 

@@ -2,6 +2,9 @@ require 'sinatra'
 require 'sinatra/contrib'
 require 'sinatra/activerecord'
 require 'json'
+require 'yaml'
+
+Config = YAML.load_file('config.yml')
 
 ENV['RACK_ENV'] ||= 'development'
 ENV['DATABASE_URL'] ||= "postgres://postgres@localhost/sinatra_backbone_#{ENV['RACK_ENV']}"
@@ -31,6 +34,8 @@ end
 class App < Sinatra::Base
   register Sinatra::Contrib
   set :logging, true
+  set :sessions, true
+  set :session_secret, Config['session_secret']
   set :root, File.expand_path(".")
   set :public_folder, Proc.new { File.join(root, "client/public") }
   set :views, Proc.new { File.join(root, "client/views") }

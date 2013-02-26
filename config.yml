@@ -1,0 +1,3 @@
+# Session secret. To generate, open irb and run:
+# require 'securerandom'; SecureRandom.hex(64)
+session_secret: "replace_me"

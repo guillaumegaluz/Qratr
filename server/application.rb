@@ -30,6 +30,7 @@ end
 
 class App < Sinatra::Base
   register Sinatra::Contrib
+  set :logging, true
   set :root, File.expand_path(".")
   set :public_folder, Proc.new { File.join(root, "client/public") }
   set :views, Proc.new { File.join(root, "client/views") }

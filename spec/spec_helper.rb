@@ -18,17 +18,19 @@ RSpec.configure do |config|
   config.filter_run :focus
   config.include Rack::Test::Methods
 
-  # Via Rspec example: https://github.com/bmabey/database_cleaner
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-  end
+  if ENV['DATABASE_URL']
+    # Via Rspec example: https://github.com/bmabey/database_cleaner
+    config.before(:suite) do
+      DatabaseCleaner.strategy = :transaction
+    end
 
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
+    config.before(:each) do
+      DatabaseCleaner.start
+    end
 
-  config.after(:each) do
-    DatabaseCleaner.clean
+    config.after(:each) do
+      DatabaseCleaner.clean
+    end
   end
 end
 

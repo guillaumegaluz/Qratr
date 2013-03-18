@@ -3,5 +3,6 @@
 session_secret: "replace_me"
 
 # URL of postgres database (optional). Example:
-# database_url: "postgres://postgres@localhost/sinatra_backbone_development"
-database_url:
+# database_url_development: "postgres://postgres@localhost/sinatra_backbone_development"
+database_url_development:
+database_url_test:

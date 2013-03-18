@@ -6,7 +6,7 @@ require 'yaml'
 Config = YAML.load_file('config.yml')
 
 ENV['RACK_ENV'] ||= 'development'
-ENV['DATABASE_URL'] ||= Config['database_url']
+ENV['DATABASE_URL'] ||= Config["database_url_#{ENV['RACK_ENV']}"]
 
 if ENV['DATABASE_URL']
   require 'sinatra/activerecord'

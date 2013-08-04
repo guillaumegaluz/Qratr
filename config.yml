@@ -4,5 +4,5 @@ session_secret: "b9d9847fd34e89bb52e0c641b16fe2a6cb982a6707389d261925ee78cf7a10d
 
 # URL of postgres database (optional). Example:
 # database_url_development: "postgres://postgres@localhost/sinatra_backbone_development"
-database_url_development:
-database_url_test:
+database_url_development: "postgres://postgres@localhost/qratr_development"
+database_url_test: "postgres://postgres@localhost/qratr_test"

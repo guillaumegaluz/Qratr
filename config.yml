@@ -1,6 +1,6 @@
 # Session secret. To generate, open irb and run:
 # require 'securerandom'; SecureRandom.hex(64)
-session_secret: "replace_me"
+session_secret: "b9d9847fd34e89bb52e0c641b16fe2a6cb982a6707389d261925ee78cf7a10d6d5fac8af7665d3b854e429a33048d5c0588e869b2501a3c67f52ae12d15d6b2c"	
 
 # URL of postgres database (optional). Example:
 # database_url_development: "postgres://postgres@localhost/sinatra_backbone_development"

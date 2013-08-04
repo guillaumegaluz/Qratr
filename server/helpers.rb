@@ -1,6 +1,6 @@
 class App < Sinatra::Base
   App.helpers do
-    def haml_partial(page, options={})
+    def partial(page, options={})
       haml page, options.merge!(:layout => false)
     end
 

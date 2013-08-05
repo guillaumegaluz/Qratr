@@ -1,0 +1,7 @@
+= partial(:player)
+
+.container
+	.playlist-title= @playlist.name
+
+	- @playlist.tracks.each do |track|
+		= partial(:track, :locals => {:track => track})

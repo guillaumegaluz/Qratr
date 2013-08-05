@@ -6,6 +6,7 @@ unless ENV['RACK_ENV'] == 'production'
   load 'jasmine/tasks/jasmine.rake'
 end
 require './lib/sprockets_environment_builder'
+require './db/seeds'
 
 task :start do
   sh %{rerun --dir server -- unicorn -p #{ENV['PORT'] || 5000} -c ./unicorn.rb}
@@ -36,6 +37,10 @@ end
 
 task 'db:rollback' do
   Rake::Task["db:schema:dump"].invoke
+end
+
+task 'db:seed' do
+  Seeds.generate_data
 end
 
 namespace :assets do

@@ -1,5 +1,6 @@
 class @TrackView extends Backbone.View
-	initialize: =>
+	initialize: (options) =>
+		@track = options.model
 		@bindEvents()
 
 	bindEvents: =>
@@ -7,3 +8,5 @@ class @TrackView extends Backbone.View
 
 	play: =>
 		console.log "play, dance"
+		SC.stream @track.permalink_url, (sound) ->
+  		sound.play()

@@ -3,7 +3,6 @@ class @PlaylistView extends Backbone.View
 
 	initialize: (options = {}) =>
     @playlist = options.model
-    console.log @playlist.get('tracks')
     @initializeTracksViews()
 
   initializeTracksViews: =>
@@ -11,4 +10,5 @@ class @PlaylistView extends Backbone.View
       $trackElement = $(trackElement)
       track = @playlist.tracks.find (t) ->
         t.get('track').id == $trackElement.data('track-id')
+      console.log track.get('track')
       new TrackView(el: trackElement, model: track.get('track'))

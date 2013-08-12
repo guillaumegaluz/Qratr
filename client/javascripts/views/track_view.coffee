@@ -3,8 +3,11 @@ class @TrackView extends Backbone.View
 		'click': 'play'
 
 	initialize: (options) =>
-		@track = options.model
+	  @track = options.model
+	  @playing = false
 
 	play: =>
+		return  if @playing
+		@playing = true
 		SC.stream @track.get('permalink_url'), (sound) ->
   		sound.play()

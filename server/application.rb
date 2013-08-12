@@ -24,6 +24,8 @@ if ENV['DATABASE_URL']
   }
 
   ActiveRecord::Base.establish_connection(DB_SETTINGS)
+
+  ActiveRecord::Base.include_root_in_json = false
 end
 
 %w[lib server server/models].each do |dir|

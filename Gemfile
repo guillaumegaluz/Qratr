@@ -19,6 +19,8 @@ gem 'sprockets-sass'
 gem 'uglifier'
 gem 'unicorn'
 gem 'yui-compressor'
+gem 'soundcloud'
+gem 'rest-client'
 
 group :assets do
   gem 'execjs'

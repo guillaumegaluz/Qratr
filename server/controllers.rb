@@ -1,5 +1,6 @@
 class App < Sinatra::Base
   get '/' do
+  	@playlists = Playlist.all
     haml :index
   end
 

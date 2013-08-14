@@ -1,2 +1,5 @@
 - content_for(:title) do
   Hello!
+
+- @playlists.each do |playlist|
+  %a{:href => "/#{playlist.id}" }= "#{playlist.name}"

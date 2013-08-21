@@ -11,12 +11,14 @@ class Seeds
 	end
 
 	def self.generate_tracks
-		Track.create(:playlist_id => @playlist.id, :artist => "terek ke", :title => "Pianodub", :permalink_url => "https://soundcloud.com/terekke/pianodub", :track_path => "/tracks/101719374")
-		Track.create(:playlist_id => @playlist.id, :artist => "HNNY", :title => "Mys (Young Marco Remix)", :permalink_url => "https://soundcloud.com/youngmarco/hnny-mys-young-marco-remix")
-		Track.create(:playlist_id => @playlist.id, :artist => "Wake Up", :title => "Rising Sun", :permalink_url => "https://soundcloud.com/wake-up-records/wake-up-001-rising-sun-b1?in=wake-up-records/sets/wake-up-001-rising-sun-awake")
-		Track.create(:playlist_id => @playlist.id, :artist => "Hailu Mergia", :title => "Shilela", :permalink_url => "https://soundcloud.com/awesometapesfromafrica/shilela")
-		Track.create(:playlist_id => @playlist.id, :artist => "Fort Romeau", :title => "Jetee", :permalink_url => "https://soundcloud.com/ghostly/fort-romeau-jetee")
-		Track.create(:playlist_id => @playlist.id, :artist => "Florence Ayiero", :title => "Orchestra Manga Kings", :permalink_url => "https://soundcloud.com/analog-africa/florence-ayiero-orchestra")
-		Track.create(:playlist_id => @playlist.id, :artist => "Future Islands", :title => "Before the Bridge", :permalink_url => "https://soundcloud.com/thrilljockey/future-islands-before-the")
+		TrackCreator.new("https://soundcloud.com/terekke/pianodub").build
+		TrackCreator.new("https://soundcloud.com/youngmarco/hnny-mys-young-marco-remix").build
+		TrackCreator.new("https://soundcloud.com/wake-up-records/wake-up-001-rising-sun-b1?in=wake-up-records/sets/wake-up-001-rising-sun-awake").build
+		TrackCreator.new("https://soundcloud.com/awesometapesfromafrica/shilela").build
+		TrackCreator.new("https://soundcloud.com/ghostly/fort-romeau-jetee").build
+		TrackCreator.new("https://soundcloud.com/analog-africa/florence-ayiero-orchestra").build
+		TrackCreator.new("https://soundcloud.com/thrilljockey/future-islands-before-the").build
+
+		Track.all.each { |t| t.update_attribute(:playlist_id, @playlist.id) }
 	end
 end

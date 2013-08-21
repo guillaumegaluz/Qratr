@@ -6284,7 +6284,6 @@ body {
   padding: 10px;
   height: 40px;
   text-align: left;
-  border: solid 1px rgba(23, 102, 172, 0.2);
 }
 /* line 8, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
 .track-container.active {

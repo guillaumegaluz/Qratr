@@ -1,7 +1,6 @@
 !!! 5
 %head
   %meta{:charset => "utf-8"}
-  %title= content_for?(:title) ? yield_content(:title) : "Default title"
   %link{:rel => "stylesheet", :href => "/assets/application.css"}
   %script{:src => "/assets/application.js"}
   = yield_content :custom_head

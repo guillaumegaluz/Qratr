@@ -1,5 +1,4 @@
 .DS_Store
 .sass-cache
 .env
-client/public/.compiled
 spec/.compiled

@@ -15,6 +15,7 @@ end
 task :guard do
   require 'guard'
   Rake::Task["assets:compile_all"].invoke
+  Rake::Task["assets:precompile"].invoke
   exec("bundle exec guard")
 end
 

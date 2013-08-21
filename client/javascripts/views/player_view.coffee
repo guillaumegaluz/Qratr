@@ -1,7 +1,7 @@
 class @PlayerView extends Backbone.Model
 	initialize: =>
 		@loadedSound = null
-		@loadedTrackId = null
+		@loadedTrack = null
 		@playing = false
 
 	trackClicked: (track) =>
@@ -10,16 +10,21 @@ class @PlayerView extends Backbone.Model
 		else
 			@play(track)
 
+	loadTrack: (track) =>
+		@loadedTrack = track
+		@updateControls()
+
+	trackIsLoaded: (track) =>
+		track.get('soundcloud_id') == @loadedTrack.get('soundcloud_id')  if @loadedTrack
+
 	play: (track) =>
 		@loadedSound.stop()  if @loadedSound
-		@loadedTrackId = track.get('soundcloud_id')
-		SC.stream @loadedTrackId, (sound) =>
+
+		@loadTrack(track)
+		SC.stream @loadedTrack.get('soundcloud_id'), (sound) =>
 			sound.play()
 			@loadedSound = sound
 		@playing = true
-
-	trackIsLoaded: (track) =>
-		track.get('soundcloud_id') == @loadedTrackId
 
 	pause: =>
 		@loadedSound.pause()
@@ -28,3 +33,9 @@ class @PlayerView extends Backbone.Model
 	resume: =>
 		@loadedSound.play()
 		@playing = true
+
+	updateControls: =>
+		trackArtist = @loadedTrack.get('artist')
+		trackTitle = @loadedTrack.get('title')
+		$('.track-artist').html(trackArtist)
+		$('.track-artist').html(trackTitle)

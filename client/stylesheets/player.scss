@@ -1,15 +1,19 @@
 #player {
-	width:100%;
-	height:30px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 50px;
 	margin: 0 auto 0 auto;
-	background-color:black;
-	color:white;
-	text-align:center;
-	padding-top:20px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding-top: 10px;
 	.track-artist {
-		color: white;
+		color: #aaa;
+		font-size: 13px;
 	}
 	.track-title {
 		color: white;
+		font-size: 17px;
 	}
 }

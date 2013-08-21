@@ -13,6 +13,7 @@ class @PlayerView extends Backbone.Model
 	loadTrack: (track) =>
 		@loadedTrack = track
 		@updateControls()
+		@updateTrackView()
 
 	trackIsLoaded: (track) =>
 		track.get('soundcloud_id') == @loadedTrack.get('soundcloud_id')  if @loadedTrack
@@ -38,4 +39,13 @@ class @PlayerView extends Backbone.Model
 		trackArtist = @loadedTrack.get('artist')
 		trackTitle = @loadedTrack.get('title')
 		$('.track-artist').html(trackArtist)
-		$('.track-artist').html(trackTitle)
+		$('.track-title').html(trackTitle)
+
+	updateTrackView: =>
+		@restAllTrackContainers()
+		$trackContainer = $(".track-container[data-track-id=#{@loadedTrack.get('id')}]")
+		$trackContainer.addClass('active')
+
+	restAllTrackContainers: =>
+		$(".track-container").each (i, trackContainerEl) =>
+			$(trackContainerEl).removeClass('active')

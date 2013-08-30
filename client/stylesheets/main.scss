@@ -3,13 +3,20 @@
 html, body {
   width: 100%;
   height: 100%;
+  margin: 0px;
+  font-family: 'Helvetica Neue'
 }
 
 body {
-	padding-top: 60px;
+	padding-top: 40px;
 }
 
 .container {
 	width: 970px;
 	margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
 }

@@ -13,8 +13,17 @@
 		color: #999;
 	}
 	ul li {
+		float: left;
 		display: inline;
 		line-height: 26px;
 		margin-right: 5px;
+	}
+	.soundcloud-logo {
+		display: none;
+		float: right;
+		img {
+			width: 25px;
+			height: 25px;
+		}
 	}
 }

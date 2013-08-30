@@ -12566,7 +12566,9 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
       trackArtist = this.loadedTrack.get('artist');
       trackTitle = this.loadedTrack.get('title');
       $('.track-artist').html(trackArtist);
-      return $('.track-title').html(trackTitle);
+      $('.track-title').html(trackTitle);
+      $('.soundcloud-logo').show(1000);
+      return $('.soundcloud-logo a').attr('href', this.loadedTrack.get('permalink_url'));
     };
 
     PlayerView.prototype.updateTrackView = function() {

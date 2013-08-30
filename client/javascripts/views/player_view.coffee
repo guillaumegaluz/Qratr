@@ -40,6 +40,8 @@ class @PlayerView extends Backbone.Model
 		trackTitle = @loadedTrack.get('title')
 		$('.track-artist').html(trackArtist)
 		$('.track-title').html(trackTitle)
+		$('.soundcloud-logo').show(1000)
+		$('.soundcloud-logo a').attr('href', @loadedTrack.get('permalink_url'))
 
 	updateTrackView: =>
 		@restAllTrackContainers()

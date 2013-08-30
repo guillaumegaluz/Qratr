@@ -44,16 +44,17 @@ ul {
   background: white;
   display: block;
   margin: 82px 0px;
+  cursor: pointer;
 }
 
-/* line 44, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
+/* line 45, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
 .prev {
   left: 0px;
   background: url("http://christian-fei.com/css/img/arrow_left.png") center center no-repeat;
   position: fixed;
 }
 
-/* line 50, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
+/* line 51, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
 .next {
   right: 0px;
   background: url("http://christian-fei.com/css/img/arrow_right.png") center center no-repeat;
@@ -79,9 +80,20 @@ ul {
 }
 /* line 15, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/player.scss */
 #player ul li {
+  float: left;
   display: inline;
   line-height: 26px;
   margin-right: 5px;
+}
+/* line 21, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/player.scss */
+#player .soundcloud-logo {
+  display: none;
+  float: right;
+}
+/* line 24, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/player.scss */
+#player .soundcloud-logo img {
+  width: 25px;
+  height: 25px;
 }
 /* line 1, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/playlist.scss */
 .playlist-container {

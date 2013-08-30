@@ -1,7 +1,17 @@
+.playlist-container{
+  background-color: white;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
 .playlist-title {
-	margin: 50px 0;
+  width: 83%;
+  text-align: center;
 	text-align: center;
 	font-size: 24px;
 	font-weight: bold;
 	color: rgba(23,102,172,1);
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #eee;
+  margin: 0 auto 20px auto;
 }

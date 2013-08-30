@@ -8,19 +8,56 @@ html, body {
 
 /* line 10, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
 body {
+  background-color: #eee;
   padding-top: 40px;
 }
 
-/* line 14, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
+/* line 15, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
 .container {
-  width: 970px;
+  width: 720px;
   margin: 0 auto;
 }
 
-/* line 19, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
+/* line 20, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
 ul {
   list-style-type: none;
   margin: 0px;
+  padding: 0px;
+}
+
+/* line 26, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
+.logo {
+  margin-top: 20px;
+  text-align: center;
+}
+/* line 29, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
+.logo img {
+  width: 150px;
+}
+
+/* line 34, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
+.prev, .next {
+  width: 120px;
+  height: 120px;
+  top: 30%;
+  padding: 5px;
+  background: white;
+  display: block;
+  margin: 82px 0px;
+}
+
+/* line 44, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
+.prev {
+  left: 0px;
+  background: url("http://christian-fei.com/css/img/arrow_left.png") center center no-repeat;
+  position: fixed;
+}
+
+/* line 50, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
+.next {
+  right: 0px;
+  background: url("http://christian-fei.com/css/img/arrow_right.png") center center no-repeat;
+  position: fixed;
 }
 /* line 1, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/player.scss */
 #player {
@@ -47,16 +84,27 @@ ul {
   margin-right: 5px;
 }
 /* line 1, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/playlist.scss */
+.playlist-container {
+  background-color: white;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+/* line 7, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/playlist.scss */
 .playlist-title {
-  margin: 50px 0;
+  width: 83%;
+  text-align: center;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
   color: #1766ac;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #eeeeee;
+  margin: 0 auto 20px auto;
 }
 /* line 1, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
 .track-container {
-  width: 50%;
+  width: 80%;
   margin: 10px auto;
   padding: 10px;
   height: 40px;

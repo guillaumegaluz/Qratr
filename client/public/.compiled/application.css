@@ -1,3 +1,37 @@
+/* line 1, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/browse.scss */
+.prev, .next {
+  width: 120px;
+  height: 120px;
+  top: 30%;
+  padding: 5px;
+  background: white;
+  display: block;
+  margin: 82px 0px;
+  cursor: pointer;
+}
+
+/* line 12, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/browse.scss */
+.prev {
+  left: 0px;
+  background: url("http://christian-fei.com/css/img/arrow_left.png") center center no-repeat;
+  position: fixed;
+}
+
+/* line 18, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/browse.scss */
+.next {
+  right: 0px;
+  background: url("http://christian-fei.com/css/img/arrow_right.png") center center no-repeat;
+  position: fixed;
+}
+/* line 1, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/header.scss */
+.logo {
+  margin-top: 20px;
+  text-align: center;
+}
+/* line 4, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/header.scss */
+.logo img {
+  width: 150px;
+}
 /* line 3, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
 html, body {
   width: 100%;
@@ -23,42 +57,6 @@ ul {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
-}
-
-/* line 26, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
-.logo {
-  margin-top: 20px;
-  text-align: center;
-}
-/* line 29, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
-.logo img {
-  width: 150px;
-}
-
-/* line 34, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
-.prev, .next {
-  width: 120px;
-  height: 120px;
-  top: 30%;
-  padding: 5px;
-  background: white;
-  display: block;
-  margin: 82px 0px;
-  cursor: pointer;
-}
-
-/* line 45, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
-.prev {
-  left: 0px;
-  background: url("http://christian-fei.com/css/img/arrow_left.png") center center no-repeat;
-  position: fixed;
-}
-
-/* line 51, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
-.next {
-  right: 0px;
-  background: url("http://christian-fei.com/css/img/arrow_right.png") center center no-repeat;
-  position: fixed;
 }
 /* line 1, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/player.scss */
 #player {

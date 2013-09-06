@@ -22,34 +22,4 @@ ul {
   margin: 0px;
   padding: 0px;
 }
-
-.logo {
-  margin-top: 20px;
-  text-align: center;
-  img {
-    width: 150px;
-  }
-}
-
-.prev, .next {
-  width: 120px;
-  height: 120px;
-  top: 30%;
-  padding: 5px;
-  background: white;
-  display: block;
-  margin: 82px 0px;
-  cursor: pointer;
-}
-
-.prev {
-  left: 0px;
-  background: url("http://christian-fei.com/css/img/arrow_left.png") center center no-repeat;
-  position: fixed;
-}
-
-.next {
-  right: 0px;
-  background: url("http://christian-fei.com/css/img/arrow_right.png") center center no-repeat;
-  position: fixed;
-}
+  

@@ -51,8 +51,14 @@ body {
   width: 720px;
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  /* line 15, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
+  .container {
+    width: 100%;
+  }
+}
 
-/* line 20, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
+/* line 24, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/main.scss */
 ul {
   list-style-type: none;
   margin: 0px;
@@ -133,6 +139,13 @@ ul {
   background-color: rgba(23, 102, 172, 0.2);
 }
 /* line 17, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
+.track-container .artwork {
+  width: 50px;
+  height: 50px;
+  border: solid;
+  float: left;
+}
+/* line 22, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
 .track-container .artwork img {
   float: left;
   width: 40px;
@@ -140,14 +153,18 @@ ul {
   margin-right: 15px;
   border: solid 1px;
 }
-/* line 24, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
-.track-container .title {
+/* line 30, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
+.track-container .metadata {
+  border: solid;
+}
+/* line 32, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
+.track-container .metadata .title {
   font-size: 20px;
   line-height: 24px;
   font-weight: bold;
 }
-/* line 29, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
-.track-container .artist {
+/* line 37, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
+.track-container .metadata .artist {
   font-size: 14px;
   line-height: 18px;
   color: #969696;

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130821031555) do
+ActiveRecord::Schema.define(:version => 20130906114637) do
 
   create_table "playlists", :force => true do |t|
     t.string   "name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20130821031555) do
     t.integer  "playlist_id"
     t.integer  "soundcloud_id"
     t.string   "stream_url"
+    t.integer  "position"
   end
 
 end

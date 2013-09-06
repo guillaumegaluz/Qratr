@@ -118,6 +118,12 @@ ul {
   border-bottom: 1px solid #eeeeee;
   margin: 0 auto 20px auto;
 }
+@media screen and (max-width: 768px) {
+  /* line 7, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/playlist.scss */
+  .playlist-title {
+    width: 92%;
+  }
+}
 /* line 1, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
 .track-container {
   width: 80%;
@@ -138,27 +144,41 @@ ul {
 .track-container:hover {
   background-color: rgba(23, 102, 172, 0.2);
 }
-
-/* line 18, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
-.artwork {
-  height: 50px;
-  float: left;
+@media screen and (max-width: 768px) {
+  /* line 1, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
+  .track-container {
+    width: 92%;
+  }
 }
-/* line 21, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
-.artwork img {
+
+/* line 22, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
+.artwork {
   float: left;
   width: 40px;
   height: 40px;
   margin-right: 15px;
 }
+@media screen and (max-width: 768px) {
+  /* line 22, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
+  .artwork {
+    height: 60px;
+    width: 60px;
+  }
+}
+/* line 33, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
+.artwork img {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
 
-/* line 30, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
+/* line 41, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
 .metadata .title {
   font-size: 20px;
   line-height: 24px;
   font-weight: bold;
 }
-/* line 35, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
+/* line 46, /Users/guillaumegaluz/Projects/qratr/client/stylesheets/track.scss */
 .metadata .artist {
   font-size: 14px;
   line-height: 18px;

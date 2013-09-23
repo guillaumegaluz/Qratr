@@ -5,7 +5,8 @@
   .backlog-tracks-container
     .section-title
       .title Backlog
-      .hint Add tracks and drag/drop them to the staging area
+      .hint All tracks in DB that don't have a playlist_id.
+      .hint Drag/drop them to the staging area on the right.
 
     .add-a-track
       %form
@@ -16,7 +17,13 @@
       - @tracks.each do |track|
         = partial(:track, :locals => {:track => track})
 
-  .staging-tracks-container
+  .staged-tracks-container
     .section-title
       .title Staged for Publication
-      .hint Reorder tracks and hit Publish
+      .hint Reorder tracks and hit "Publish" to publish live.
+
+    .staged-tracks
+
+      .publish-container
+        %button.publish-button{:title => "Publish", :type => "submit"}
+

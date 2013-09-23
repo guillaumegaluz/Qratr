@@ -1,10 +1,10 @@
 .track-container {
 	display: table;
 	width: 80%;
-	margin: 5px auto;
+	margin: 0 auto;
 	padding: 10px;
 	cursor: pointer;
-	
+
 	&.active {
 		background-color: rgba(23,102,172,0.1);
 		&:hover {
@@ -24,13 +24,13 @@
 .artwork {
 	display: table-cell;
 	vertical-align: top;
-	width: 40px;
-	height: 40px;
+	width: 50px;
+	height: 50px;
 	padding-right: 15px;
 
 	@media screen and (max-width: 768px) {
-  	height: 60px;
-  	width: 60px;
+  	height: 70px;
+  	width: 70px;
 	}
 
 	img {

@@ -1,0 +1,45 @@
+.admin {
+  margin: -40px 0 0 20px;
+  .section-title {
+    margin: 20px 0;
+    .title {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: yellow;
+    }
+    .hint {
+      margin-bottom: 20px;
+      font-style: italic;
+      font-size: 14px;
+      color: #aaa;
+    }
+  }
+}
+
+.backlog-tracks-container, .staging-tracks-container {
+  float: left;
+  width: 500px;
+  min-height: 500px;
+  padding-left: 20px;
+  margin-right: 50px;
+  border: solid 1px;
+}
+
+.add-a-track {
+  margin-bottom: 10px;
+  input {
+    width: 400px;
+    height: 25px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+}
+
+.backlog-tracks {
+  .track-container {
+    float: left;
+    margin-left: -10px;
+  }
+}

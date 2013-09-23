@@ -4,6 +4,11 @@ class App < Sinatra::Base
     haml :index
   end
 
+  get '/admin' do
+    @tracks = Track.where(:playlist_id => nil)
+    haml :admin
+  end
+
   get '/:id' do
   	@playlist = Playlist.find(params[:id]) 
   	haml :playlist
